@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Advantages } from "../components/advantages";
+import { Banner } from "../components/banner";
 import { Header } from "../components/header";
-import styles from "../styles/Home.module.css";
+import { HowSaleHair } from "../components/how-sale-hair";
 
 export default function Home() {
 	return (
@@ -13,7 +14,11 @@ export default function Home() {
 			</Head>
 			<Header></Header>
 
-			<main>d</main>
+			<main>
+				<Banner />
+				<HowSaleHair />
+				<Advantages />
+			</main>
 
 			<footer>d</footer>
 		</div>
