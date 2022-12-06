@@ -18,7 +18,9 @@ export const HowSaleHair = () => {
 						распущенных волос со спины или фото среза волос рядом с рулеткой
 					</StepDescriptionText>
 				</StyledStep>
-				<ArrowRight />
+				<StyledArrow>
+					<ArrowRight />
+				</StyledArrow>
 				<StyledStep>
 					<StyledImageWrapper>
 						<List />
@@ -28,7 +30,9 @@ export const HowSaleHair = () => {
 						и договариваемся с вами о продаже волос
 					</StepDescriptionText>
 				</StyledStep>
-				<ArrowRight />
+				<StyledArrow>
+					<ArrowRight />
+				</StyledArrow>
 				<StyledStep>
 					<StyledImageWrapper>
 						<Banknot />
@@ -67,6 +71,10 @@ const StyledStepsWrapper = styled.div`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+	}
 `;
 
 const StyledStep = styled.div`
@@ -99,4 +107,11 @@ const StepDescriptionText = styled.p`
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	color: #000;
+`;
+
+const StyledArrow = styled.div`
+	@media (max-width: 1024px) {
+		margin: 40px 0px;
+		transform: rotate(90deg);
+	}
 `;

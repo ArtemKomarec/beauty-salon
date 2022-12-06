@@ -102,11 +102,11 @@ const AdvantagesContainer = styled.div`
 const AdvantagesLeft = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 0px 20px;
+	margin: 0px 10px;
 `;
 
 const AdvantagesLeftItem = styled.div`
-	width: 280px;
+	width: 230px;
 	margin-top: 80px;
 	display: flex;
 	flex-direction: row;
@@ -138,7 +138,7 @@ const IconWrapper = styled.div`
 `;
 
 const AdvantagesRightItem = styled.div`
-	width: 280px;
+	width: 230px;
 	margin-top: 80px;
 	display: flex;
 	flex-direction: row-reverse;

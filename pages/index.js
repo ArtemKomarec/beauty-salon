@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { Advantages } from "../components/advantages";
 import { Banner } from "../components/banner";
+import { CutYourself } from "../components/cut-yourself";
 import { Header } from "../components/header";
 import { HowSaleHair } from "../components/how-sale-hair";
+import { OnlineEvaluation } from "../components/online-evaluation";
 
 export default function Home() {
 	return (
@@ -18,6 +20,8 @@ export default function Home() {
 				<Banner />
 				<HowSaleHair />
 				<Advantages />
+				<OnlineEvaluation />
+				<CutYourself />
 			</main>
 
 			<footer>d</footer>
