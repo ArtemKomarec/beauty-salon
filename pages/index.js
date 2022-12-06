@@ -1,10 +1,15 @@
 import Head from "next/head";
 import { Advantages } from "../components/advantages";
+import { AskSection } from "../components/ask-section";
 import { Banner } from "../components/banner";
 import { CutYourself } from "../components/cut-yourself";
+import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { HowSaleHair } from "../components/how-sale-hair";
+import { MapSection } from "../components/map-section";
 import { OnlineEvaluation } from "../components/online-evaluation";
+import { ReviewsSection } from "../components/reviews-section";
+import { ToClientSection } from "../components/to-client-section";
 
 export default function Home() {
 	return (
@@ -22,9 +27,13 @@ export default function Home() {
 				<Advantages />
 				<OnlineEvaluation />
 				<CutYourself />
+				<ToClientSection />
+				<ReviewsSection />
+				<AskSection />
+				<MapSection />
 			</main>
 
-			<footer>d</footer>
+			<Footer />
 		</div>
 	);
 }
