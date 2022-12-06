@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Sticky } from "../assets/icons/sticky";
-import banner from "../assets/main-banner.jpg";
+import { Sticky } from "../../assets/icons/sticky";
+import banner from "../../assets/main-banner.jpg";
 
 export const Banner = () => {
 	return (
@@ -57,14 +57,8 @@ export const Banner = () => {
 const StyledBannerWrapper = styled.div`
 	min-height: 800px;
 	height: 100vh;
-	background-image:
-	// linear-gradient(
-	// 		rgba(255, 255, 255, 0.25),
-	// 		rgba(255, 255, 255, 0.25)
-	// 	),
-		url(${banner.src});
+	background-image: url(${banner.src});
 	box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 80% 20%;

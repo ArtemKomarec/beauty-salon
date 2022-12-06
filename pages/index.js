@@ -1,15 +1,15 @@
 import Head from "next/head";
-import { Advantages } from "../components/advantages";
-import { AskSection } from "../components/ask-section";
-import { Banner } from "../components/banner";
-import { CutYourself } from "../components/cut-yourself";
+import { Advantages } from "../components/main/advantages.jsx";
+import { AskSection } from "../components/main/ask-section";
+import { Banner } from "../components/main/banner";
+import { CutYourself } from "../components/main/cut-yourself";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-import { HowSaleHair } from "../components/how-sale-hair";
-import { MapSection } from "../components/map-section";
-import { OnlineEvaluation } from "../components/online-evaluation";
-import { ReviewsSection } from "../components/reviews-section";
-import { ToClientSection } from "../components/to-client-section";
+import { HowSaleHair } from "../components/main/how-sale-hair";
+import { MapSection } from "../components/main/map-section";
+import { OnlineEvaluation } from "../components/main/online-evaluation";
+import { ReviewsSection } from "../components/main/reviews-section";
+import { ToClientSection } from "../components/main/to-client-section";
 
 export default function Home() {
 	return (
@@ -26,7 +26,7 @@ export default function Home() {
 				<HowSaleHair />
 				<Advantages />
 				<OnlineEvaluation />
-				<CutYourself />
+				{/* <CutYourself /> */}
 				<ToClientSection />
 				<ReviewsSection />
 				<AskSection />

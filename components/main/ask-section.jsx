@@ -7,7 +7,7 @@ import {
 	OkSizedIcon,
 	VkontakteIcon,
 	VkontakteSizedIcon,
-} from "../icons";
+} from "../../icons";
 import styled from "styled-components";
 
 const StyledAsqSection = styled.div`
@@ -46,7 +46,15 @@ const StyledAsqSection = styled.div`
 		font-size: 34px;
 	}
 
-	& .asq-section__fast-links > ul {
+	& .asq-section__fast-links {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	& .asq-section__fast-links > p {
 		display: flex;
 		gap: 8px;
 		color: red;
@@ -55,23 +63,8 @@ const StyledAsqSection = styled.div`
 		justify-content: center;
 	}
 
-	& .asq-section__fast-links > ul li a {
-		text-align: center;
-		font-family: "Roboto", Arial, sans-serif;
-		font-size: 32px;
-		line-height: 60px;
-		box-sizing: content-box;
-		margin: 0;
-		padding: 0;
-		border: 0;
-		color: rgb(43, 201, 38);
-		border-bottom: 1px solid rgb(43, 201, 38);
-		box-shadow: none;
-		text-decoration: none;
-		font-weight: 500;
-	}
-
 	& .asq-section__socials-list > div {
+		margin-top: 12px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -80,11 +73,6 @@ const StyledAsqSection = styled.div`
 `;
 
 const socialsFastLinks = [
-	{
-		caption: "WhatsApp",
-		href: "https://api.whatsapp.com/send?text=Здравствуйте! Меня интересует продажа волос.&amp;phone=79025833110&amp;abid=79025833110",
-		color: "#2bc926",
-	},
 	{
 		caption: "Viber",
 		href: "VIBER://chat?number=%2B79025833110",
@@ -105,10 +93,6 @@ const contactsList = [
 	{
 		href: "#",
 		Icon: VkontakteSizedIcon,
-	},
-	{
-		href: "#",
-		Icon: OkSizedIcon,
 	},
 	{
 		href: "#",
@@ -139,19 +123,17 @@ export const AskSection = () => (
 		</div>
 
 		<div className="asq-section__fast-links">
-			<ul>
-				{socialsFastLinks.map((link) => (
-					<li>
-						<a
-							style={{ color: link.color, borderColor: link.color }}
-							href={link.href}
-							rel="noopener noreferrer"
-						>
-							{link.caption}
-						</a>
-					</li>
-				))}
-			</ul>
+			{socialsFastLinks.map((link) => (
+				<p>
+					<a
+						style={{ color: link.color, borderColor: link.color }}
+						href={link.href}
+						rel="noopener noreferrer"
+					>
+						{link.caption}
+					</a>
+				</p>
+			))}
 		</div>
 		<div className="asq-section__socials-list">
 			<div>

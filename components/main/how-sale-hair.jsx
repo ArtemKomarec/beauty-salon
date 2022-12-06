@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { ArrowRight } from "../assets/icons/arrow-right";
-import { Banknot } from "../assets/icons/banknot";
-import { List } from "../assets/icons/list";
-import { WomanHair } from "../assets/icons/woman-hair";
+import { ArrowRight } from "../../assets/icons/arrow-right";
+import { Banknot } from "../../assets/icons/banknot";
+import { List } from "../../assets/icons/list";
+import { WomanHair } from "../../assets/icons/woman-hair";
 
 export const HowSaleHair = () => {
 	return (

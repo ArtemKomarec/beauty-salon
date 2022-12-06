@@ -115,6 +115,7 @@ const EvaluationText = styled.p`
 const OnlineEvaluationTableTitle = styled.h1`
 	margin-top: 12px;
 	color: #ce1528;
+	text-align: center;
 	font-size: 42px;
 	line-height: 1.23;
 	font-family: "Roboto", Arial, sans-serif;
@@ -130,6 +131,11 @@ const OnlineStepWrapper = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	gap: 40px;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 const OnlineStepContainer = styled.div`
@@ -137,6 +143,11 @@ const OnlineStepContainer = styled.div`
 	width: 100%;
 	padding-top: 35px;
 	position: relative;
+
+	@media (max-width: 768px) {
+		max-width: 540px;
+		width: 100%;
+	}
 `;
 
 const OnlineStepCircle = styled.div`

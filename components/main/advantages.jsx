@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { AdvantagesBanknot } from "../assets/icons/advantages/advantages-banknot";
-import advantages from "../assets/advantages.png";
+import { AdvantagesBanknot } from "../../assets/icons/advantages/advantages-banknot";
+import advantages from "../../assets/advantages.png";
 import Image from "next/image";
-import { AdvantagesCard } from "../assets/icons/advantages/advantages-card";
-import { AdvantagesHair } from "../assets/icons/advantages/advantages-hair";
-import { AdvantagesTail } from "../assets/icons/advantages/advantages-tail";
-import { AdvantagesMan } from "../assets/icons/advantages/advantages-man";
-import { AdvantagesWorkHonest } from "../assets/icons/advantages/advantages-work-honest";
+import { AdvantagesCard } from "../../assets/icons/advantages/advantages-card";
+import { AdvantagesHair } from "../../assets/icons/advantages/advantages-hair";
+import { AdvantagesTail } from "../../assets/icons/advantages/advantages-tail";
+import { AdvantagesMan } from "../../assets/icons/advantages/advantages-man";
+import { AdvantagesWorkHonest } from "../../assets/icons/advantages/advantages-work-honest";
 
 export const Advantages = () => {
 	return (
@@ -44,7 +44,9 @@ export const Advantages = () => {
 						</IconWrapper>
 					</AdvantagesLeftItem>
 				</AdvantagesLeft>
-				<Image src={advantages} alt="advantages image" />
+				<ImageWrapper>
+					<Image src={advantages} alt="advantages image" />
+				</ImageWrapper>
 				<AdvantagesLeft>
 					<AdvantagesRightItem>
 						<div>
@@ -98,6 +100,11 @@ const AdvantagesContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	@media (max-width: 1024px) {
+		margin-top: 0px;
+		align-items: center;
+		flex-direction: column;
+	}
 `;
 const AdvantagesLeft = styled.div`
 	display: flex;
@@ -114,6 +121,12 @@ const AdvantagesLeftItem = styled.div`
 	align-items: center;
 	text-align: right;
 	gap: 10px;
+	@media (max-width: 1024px) {
+		max-width: 640px;
+		width: 100%;
+		flex-direction: row-reverse;
+		text-align: left;
+	}
 `;
 
 const ItemTitle = styled.h3`
@@ -137,6 +150,10 @@ const IconWrapper = styled.div`
 	height: 60px;
 `;
 
+const ImageWrapper = styled.div`
+	margin-top: 80px;
+`;
+
 const AdvantagesRightItem = styled.div`
 	width: 230px;
 	margin-top: 80px;
@@ -145,4 +162,8 @@ const AdvantagesRightItem = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 	gap: 10px;
+	@media (max-width: 1024px) {
+		max-width: 640px;
+		width: 100%;
+	}
 `;

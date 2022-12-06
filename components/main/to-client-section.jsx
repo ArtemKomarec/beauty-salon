@@ -19,7 +19,7 @@ const StyledToClientSlideItem = styled.div`
 		background-size: cover;
 		background-position: center;
 		background-color: #000;
-		opacity: 0.5;
+		filter: brightness(0.5);
 	}
 
 	& .tc-slide__container {

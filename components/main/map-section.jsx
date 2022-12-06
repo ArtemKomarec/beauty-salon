@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { YMaps, Map, Placemark } from "react-yandex-maps";
-import { FacebookIcon, InstagramIcon, OkIcon, VkontakteIcon } from "../icons";
+import {
+	FacebookIcon,
+	InstagramIcon,
+	OkIcon,
+	VkontakteIcon,
+} from "../../icons";
 import { useEffect, useRef, useState } from "react";
 
 const StyledMapSection = styled.div`

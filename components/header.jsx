@@ -4,6 +4,7 @@ import logo from "../assets/MockLogo.png";
 import vk from "../assets/vk.png";
 import instagram from "../assets/instagram.png";
 import telephone from "../assets/telephone.png";
+import { Hamburger } from "./main/hamburger";
 
 export const Header = () => {
 	return (
@@ -13,19 +14,20 @@ export const Header = () => {
 			</HeaderLogo>
 
 			<HeaderMenu>
+				<Hamburger />
 				<HeaderMenuItem>Главная</HeaderMenuItem>
 				<HeaderMenuItem>Обучение</HeaderMenuItem>
-				<HeaderMenuItem>Наращивание волос</HeaderMenuItem>
+				<HeaderMenuItem>Наращивание</HeaderMenuItem>
 				<HeaderMenuItem>Постижерные изделия</HeaderMenuItem>
 				<StyledSocialLinks>
 					<a href="/">
-						<Image src={vk} alt="alt" width={36} height={36} />
+						<Image src={vk} alt="alt" width={30} height={30} />
 					</a>
 					<a href="/">
-						<Image src={instagram} alt="alt" width={36} height={36} />
+						<Image src={instagram} alt="alt" width={30} height={30} />
 					</a>
-					<a href="/">
-						<Image src={telephone} alt="alt" width={36} height={36} />
+					<a href="tel:+375336666666">
+						<Image src={telephone} alt="alt" width={30} height={30} />
 					</a>
 				</StyledSocialLinks>
 			</HeaderMenu>
@@ -59,10 +61,20 @@ const HeaderMenuItem = styled.div`
 	font-family: "Roboto";
 	text-transform: uppercase;
 	cursor: pointer;
+	text-align: center;
+	@media (max-width: 892px) {
+		font-size: 14px;
+	}
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 const StyledSocialLinks = styled.div`
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
