@@ -25,6 +25,17 @@ a {
 	box-sizing: border-box;
 }
 
+#__next
+	> div
+	> main
+	> div
+	> div.map-section__map
+	> div
+	> div
+	> ymaps:nth-child(2) {
+	display: none;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 	}

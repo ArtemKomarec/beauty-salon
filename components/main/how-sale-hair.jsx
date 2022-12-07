@@ -61,6 +61,10 @@ const StyledSaleHairTitle = styled.h1`
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #103038;
+
+	@media (max-width: 576px) {
+		font-size: 30px;
+	}
 `;
 
 const StyledStepsWrapper = styled.div`
@@ -98,6 +102,10 @@ const StepDescriptionTitle = styled.h3`
 	line-height: 1.35;
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 600;
+
+	@media (max-width: 576px) {
+		font-size: 20px;
+	}
 `;
 
 const StepDescriptionText = styled.p`

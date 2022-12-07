@@ -1,6 +1,11 @@
+import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
 import { Cross } from "../../assets/icons/close-hamburger";
+import viber from "../../assets/viber.png";
+import instagram from "../../assets/instagram.png";
+import facebook from "../../assets/facebook.png";
+import logo from "../../assets/MockLogo.png";
 
 export const Hamburger = (e) => {
 	const [toggle, setToggle] = useState(false);
@@ -27,11 +32,25 @@ export const Hamburger = (e) => {
 					<button onClick={handleClick}>
 						<Cross />
 					</button>
-					<div className="header-links">
-						<a href="/">Главная</a>
-						<a href="/">Обучение</a>
-						<a href="/">Наращивание волос</a>
-						<a href="/">Постижерные изделия</a>
+					<div className="hamburger-container">
+						<div className="hamburger-links">
+							<Image src={logo} />
+							<a href="/">Главная</a>
+							<a href="/">Обучение</a>
+							<a href="/">Наращивание волос</a>
+							<a href="/">Постижерные изделия</a>
+						</div>
+						<div className="contants-with-us">
+							<div className="socials-contacts">
+								<Image src={viber} width={38} height={38} />
+								<Image src={instagram} width={30} height={30} />
+								<Image src={facebook} width={30} height={30} />
+							</div>
+							<a className="phone-contact" href="tel:+375336564222">
+								+375336564294
+							</a>
+							<div className="want-sell">Хочу продать</div>
+						</div>
 					</div>
 				</HamburgerMenu>
 			</div>
@@ -81,10 +100,9 @@ const StyledHamburger = styled.div`
 `;
 
 const HamburgerMenu = styled.div`
-	min-width: 180px;
-	max-width: calc(320px - 80px);
+	min-width: 280px;
+	max-width: calc(320px - 40px);
 	height: 100vh;
-	padding: 0px 0px 0px 20px;
 	position: absolute;
 	right: -9px;
 	top: -50px;
@@ -94,15 +112,78 @@ const HamburgerMenu = styled.div`
 	transition: all 0.2s linear;
 	display: none;
 
-	.header-links {
+	.hamburger-container {
+		height: 76%;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.hamburger-links {
+		padding: 20px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		gap: 8px;
+	}
+
+	.hamburger-links a {
+		color: #ffffff;
+		font-size: 19px;
+		font-weight: 600;
+		font-family: "Roboto";
+		text-transform: uppercase;
+	}
+
+	.hamburger-links :nth-child(2) {
+		margin-top: 30px;
+	}
+
+	.contants-with-us {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 16px;
+	}
+
+	.socials-contacts {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.socials-contacts img:nth-child(2) {
+		margin-left: -5px;
+	}
+
+	.phone-contact {
+		max-width: 200px;
+		width: 100%;
+		padding: 14px 20px;
+		margin: 12px auto 0px;
+		border-radius: 6px;
+		background: white;
+		color: #f03555;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	.want-sell {
+		max-width: 200px;
+		width: 100%;
+		padding: 14px 20px;
+		margin: 12px auto 0px;
+		border: 2px solid #ffffff;
+		border-radius: 6px;
+		color: white;
+		text-align: center;
 	}
 
 	& > button {
 		width: 100%;
 		text-align: end;
-		padding: 6px 0px 0px 0px;
+		padding: 12px 12px 0 0;
 	}
 `;

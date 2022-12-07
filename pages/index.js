@@ -26,7 +26,7 @@ export default function Home() {
 				<HowSaleHair />
 				<Advantages />
 				<OnlineEvaluation />
-				{/* <CutYourself /> */}
+				<CutYourself />
 				<ToClientSection />
 				<ReviewsSection />
 				<AskSection />

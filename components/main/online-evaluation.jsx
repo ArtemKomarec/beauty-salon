@@ -92,6 +92,7 @@ const StyledEvaluationWrapper = styled.div`
 `;
 
 const EvaluationTitle = styled.h2`
+	padding: 0px 20px;
 	text-align: center;
 	color: #17434e;
 	font-size: 26px;
@@ -103,6 +104,7 @@ const EvaluationTitle = styled.h2`
 const EvaluationText = styled.p`
 	max-width: 1000px;
 	width: 100%;
+	padding: 0px 20px;
 	margin-top: 22px;
 	text-align: center;
 	font-size: 20px;
@@ -110,6 +112,10 @@ const EvaluationText = styled.p`
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 300;
 	color: #000;
+
+	@media (max-width: 576px) {
+		font-size: 16px;
+	}
 `;
 
 const OnlineEvaluationTableTitle = styled.h1`
@@ -120,6 +126,10 @@ const OnlineEvaluationTableTitle = styled.h1`
 	line-height: 1.23;
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 600;
+
+	@media (max-width: 576px) {
+		font-size: 30px;
+	}
 `;
 
 const OnlineStepWrapper = styled.div`
@@ -176,6 +186,10 @@ const CircleNumber = styled.div`
 	line-height: 1.35;
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 600;
+
+	@media (max-width: 576px) {
+		font-size: 16px;
+	}
 `;
 
 const OnlineStepDescription = styled.div`
@@ -196,6 +210,10 @@ const StepDescriptionTitle = styled.h3`
 	line-height: 1.35;
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 600;
+
+	@media (max-width: 576px) {
+		font-size: 16px;
+	}
 `;
 
 const StepDescriptionText = styled.p`
@@ -207,6 +225,10 @@ const StepDescriptionText = styled.p`
 	line-height: 1.55;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
+
+	@media (max-width: 576px) {
+		font-size: 14px;
+	}
 `;
 
 const StyledMoreInformation = styled.div`

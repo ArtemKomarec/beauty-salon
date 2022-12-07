@@ -24,6 +24,11 @@ const StyledReviewsSection = styled.div`
 		border: 0;
 		color: rgb(16, 48, 56);
 		margin-bottom: 40px;
+
+		@media (max-width: 576px) {
+			padding: 0px 10px;
+			font-size: 30px;
+		}
 	}
 
 	& .swiper-horizontal > .swiper-scrollbar,
@@ -83,6 +88,13 @@ const StyledReviewsSection = styled.div`
 		background-color: #17434e !important;
 		opacity: 1;
 	}
+
+	@media (max-width: 576px) {
+		.swiper-button-next,
+		.swiper-button-prev {
+			display: none;
+		}
+	}
 `;
 
 const StyledReviewItem = styled.div`
@@ -102,6 +114,11 @@ const StyledReviewItem = styled.div`
 		line-height: 1.55;
 		margin-top: 40px;
 		margin-bottom: 32px;
+
+		@media (max-width: 576px) {
+			padding: 0px 10px;
+			font-size: 16px;
+		}
 	}
 
 	& .review-item__fio {
@@ -116,6 +133,10 @@ const StyledReviewItem = styled.div`
 		margin-top: 8px;
 		margin-bottom: 5px;
 		color: #17434e;
+
+		@media (max-width: 576px) {
+			font-size: 18px;
+		}
 	}
 
 	& .review-item__city {

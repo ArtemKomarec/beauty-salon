@@ -11,7 +11,7 @@ export const Banner = () => {
 					<br />в <span style={{ color: "rgb(240, 40, 70)" }}>Гродно</span>
 				</StyledContentTitle>
 				<HighPrice>
-					Дорого{" "}
+					Дорого <br />
 					<span style={{ color: "rgb(240, 40, 70)" }}>покупаем волосы</span>
 				</HighPrice>
 				<StyledHairLength>длиной от 35 см</StyledHairLength>
@@ -62,12 +62,19 @@ const StyledBannerWrapper = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 80% 20%;
+	@media (max-width: 768px) {
+		background-position: 1% 20%;
+	}
 `;
 
 const StyledBannerContent = styled.div`
 	padding-top: 6%;
-	margin-left: 20%;
+	margin-left: 10%;
 	color: black;
+
+	@media (max-width: 576px) {
+		padding-top: 20%;
+	}
 `;
 
 const StyledContentTitle = styled.h1`
@@ -79,6 +86,15 @@ const StyledContentTitle = styled.h1`
 	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
+
+	@media (max-width: 1340px) {
+		font-size: 38px;
+		line-height: 1.1;
+	}
+
+	@media (max-width: 576px) {
+		font-size: 27px;
+	}
 `;
 
 const HighPrice = styled.h2`
@@ -86,12 +102,21 @@ const HighPrice = styled.h2`
 	color: floralwhite;
 	font-size: 38px;
 	font-family: "Open Sans", Arial, sans-serif;
-	line-height: 1.2;
+	line-height: 1.4;
 	font-weight: 700;
 	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
 	text-transform: uppercase;
+
+	@media (max-width: 1340px) {
+		font-size: 25px;
+		line-height: 1.1;
+	}
+
+	@media (max-width: 576px) {
+		font-size: 18px;
+	}
 `;
 
 const StyledHairLength = styled.p`
@@ -103,21 +128,35 @@ const StyledHairLength = styled.p`
 	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
+
+	@media (max-width: 1340px) {
+		font-size: 27px;
+	}
+
+	@media (max-width: 576px) {
+		font-size: 18px;
+	}
 `;
 
 const StyledLinksContainer = styled.div`
+	margin-top: 40px;
 	display: flex;
 	flex-direction: row;
 	gap: 14px;
 	color: #ffffff;
 	text-align: center;
 	z-index: 4;
+
+	@media (max-width: 1340px) {
+		max-width: 246px;
+		width: 100%;
+		flex-direction: column;
+	}
 `;
 
 const StyledLinks = styled.a`
-	margin-top: 40px;
 	padding: 10px;
-	color: #floralwhite;
+	color: floralwhite;
 	font-size: 16px;
 	font-family: "Open Sans", Arial, sans-serif;
 	line-height: 1.55;
@@ -125,12 +164,19 @@ const StyledLinks = styled.a`
 	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
+	@media (max-width: 1340px) {
+		margin-top: 0px;
+	}
 `;
 
 const StyledDescription = styled.div`
 	margin-top: 26px;
 	display: grid;
 	grid-template-columns: 300px 1fr;
+
+	@media (max-width: 576px) {
+		grid-template-columns: 210px;
+	}
 `;
 
 const DescriptionItem = styled.div`

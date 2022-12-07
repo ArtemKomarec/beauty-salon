@@ -40,6 +40,10 @@ const StyledToClientSlideItem = styled.div`
 		line-height: 1.23;
 		color: #f03555;
 		text-transform: uppercase;
+
+		@media (max-width: 576px) {
+			font-size: 34px;
+		}
 	}
 	& .tc-slide__description {
 		text-align: center;
@@ -52,6 +56,11 @@ const StyledToClientSlideItem = styled.div`
 		line-height: 1.55;
 		color: #fff;
 		margin-top: 30px;
+
+		@media (max-width: 576px) {
+			padding: 0px 10px;
+			font-size: 18px;
+		}
 	}
 `;
 
@@ -80,6 +89,13 @@ const StyledToClientSection = styled.div`
 
 	& .swiper-pagination-bullet.swiper-pagination-bullet-active {
 		background-color: #ffffff;
+	}
+
+	@media (max-width: 576px) {
+		.swiper-button-next,
+		.swiper-button-prev {
+			display: none;
+		}
 	}
 `;
 

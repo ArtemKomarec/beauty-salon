@@ -32,6 +32,10 @@ const StyledFooter = styled.footer`
 		color: #ffffff;
 		display: block;
 		margin-bottom: 10px;
+
+		@media (max-width: 576px) {
+			font-size: 14px;
+		}
 	}
 
 	& .menu-item__caption {
@@ -49,6 +53,10 @@ const StyledFooter = styled.footer`
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: #f03555;
+
+		@media (max-width: 576px) {
+			font-size: 16px;
+		}
 	}
 
 	& .footer__logo {

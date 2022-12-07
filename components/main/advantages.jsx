@@ -93,6 +93,10 @@ const AdvantagesTitle = styled.h1`
 	font-size: 42px;
 	line-height: 1.23;
 	font-family: "Roboto", Arial, sans-serif;
+
+	@media (max-width: 576px) {
+		font-size: 30px;
+	}
 `;
 
 const AdvantagesContainer = styled.div`
@@ -143,6 +147,10 @@ const ItemText = styled.p`
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 300;
 	color: #000;
+
+	@media (max-width: 576px) {
+		font-size: 14px;
+	}
 `;
 
 const IconWrapper = styled.div`
@@ -152,6 +160,14 @@ const IconWrapper = styled.div`
 
 const ImageWrapper = styled.div`
 	margin-top: 80px;
+
+	@media (max-width: 576px) {
+		img {
+			max-width: 534px;
+			width: 100%;
+			height: auto;
+		}
+	}
 `;
 
 const AdvantagesRightItem = styled.div`

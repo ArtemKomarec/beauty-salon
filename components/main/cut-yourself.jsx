@@ -3,17 +3,17 @@ import Image from "next/image";
 import beforeCut from "../../assets/cut-yourself.jpeg";
 import afterCut from "../../assets/cut-yourself-res.jpeg";
 
-const ImageStyle = {
-	maxWidth: "440px",
-	maxHeight: "560px",
-};
+// const ImageStyle = {
+// 	maxWidth: "440px",
+// 	maxHeight: "560px",
+// };
 
 export const CutYourself = () => {
 	return (
 		<StyledCutWrapper>
 			<StyledCutContainer>
 				<ContainerContentItem>
-					<Image style={ImageStyle} src={beforeCut} />
+					<Image src={beforeCut} />
 					<ItemDescriptionTitle>
 						Не срезайте волосы сами или в парикмахерских
 					</ItemDescriptionTitle>
@@ -22,7 +22,7 @@ export const CutYourself = () => {
 					</ItemDescriptionText>
 				</ContainerContentItem>
 				<ContainerContentItem>
-					<Image style={ImageStyle} src={afterCut} />
+					<Image src={afterCut} />
 					<ItemDescriptionTitle>
 						Вымойте и высушите волосы накануне среза
 					</ItemDescriptionTitle>
@@ -43,10 +43,16 @@ const StyledCutWrapper = styled.div`
 `;
 
 const StyledCutContainer = styled.div`
+	padding: 0px 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	gap: 40px;
+
+	@media (max-width: 576px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 const ContainerContentItem = styled.div`
@@ -57,6 +63,12 @@ const ContainerContentItem = styled.div`
 	display: flex;
 	flex-direction: column;
 	background-color: #ffffff;
+
+	img {
+		max-width: 440px;
+		width: 100%;
+		height: auto;
+	}
 `;
 
 const ItemDescriptionTitle = styled.h1`
@@ -67,6 +79,10 @@ const ItemDescriptionTitle = styled.h1`
 	line-height: 1.35;
 	font-family: "Roboto", Arial, sans-serif;
 	font-weight: 600;
+
+	@media (max-width: 576px) {
+		font-size: 22px;
+	}
 `;
 
 const ItemDescriptionText = styled.p`
@@ -77,4 +93,8 @@ const ItemDescriptionText = styled.p`
 	color: #000;
 	font-size: 18px;
 	line-height: 1.4;
+
+	@media (max-width: 576px) {
+		font-size: 16px;
+	}
 `;

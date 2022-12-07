@@ -27,6 +27,10 @@ const StyledAsqSection = styled.div`
 		font-size: 42px;
 		color: #103038;
 		margin-bottom: 75px;
+
+		@media (max-width: 576px) {
+			font-size: 30px;
+		}
 	}
 
 	& .text-mark {
@@ -44,6 +48,10 @@ const StyledAsqSection = styled.div`
 		padding: 0;
 		border: 0;
 		font-size: 34px;
+
+		@media (max-width: 576px) {
+			font-size: 26px;
+		}
 	}
 
 	& .asq-section__fast-links {

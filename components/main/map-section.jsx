@@ -14,6 +14,10 @@ const StyledMapSection = styled.div`
 	& .map-section__info {
 		padding: 70px;
 		background-color: #17434e;
+
+		@media (max-width: 576px) {
+			padding: 20px;
+		}
 	}
 	& .map-section__map,
 	& .map-section__info {
@@ -27,6 +31,10 @@ const StyledMapSection = styled.div`
 		line-height: 1.55;
 		color: #f03555;
 		margin-top: 40px;
+
+		@media (max-width: 576px) {
+			font-size: 14px;
+		}
 	}
 
 	& .map-section__socials-list {
@@ -46,6 +54,9 @@ const StyledMapSection = styled.div`
 		margin-bottom: 40px;
 		color: #ffffff;
 		margin-top: 20px;
+		@media (max-width: 576px) {
+			font-size: 18px;
+		}
 
 		p {
 			margin: 0;
@@ -59,6 +70,21 @@ const StyledMapSection = styled.div`
 		color: #ffffff;
 		box-sizing: content-box;
 		font-weight: 700;
+
+		@media (max-width: 576px) {
+			font-size: 20px;
+		}
+	}
+	@media (max-width: 576px) {
+		flex-direction: column;
+
+		& .map-section__map {
+			display: none;
+		}
+
+		& .map-section__info {
+			width: 100%;
+		}
 	}
 `;
 
