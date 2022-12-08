@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import check from "../../assets/advantages.png";
+import check from "../../public/advantages.png";
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Image from "next/image";
-import check2 from "../../assets/MockLogo.png";
+import check2 from "../../public/MockLogo.png";
+
 const watches = [
 	{
 		url: check,
@@ -14,7 +15,7 @@ const watches = [
 		alt: "sec",
 	},
 ];
-let watchUrls = [check, check2];
+let watchUrls = ["/advantages.png", "/MockLogo.png"];
 
 export const Examples = () => {
 	const [numberOfWatches, setNumberOfWatches] = useState(0);
@@ -35,29 +36,23 @@ export const Examples = () => {
 			<div>
 				<h1 className="examples-title">Примеры работ</h1>
 				<div className="images-container">
-					<div className="images-container">
-						{watches.map((watchImg, j) => (
-							<div
-								key={watchImg + j}
-								onClick={() => {
-									openLightboxOnSource(numberOfWatches + j);
-								}}
-							>
-								<Image
-									src={watchImg.url}
-									alt="First"
-									width={300}
-									height={300}
-								/>
-							</div>
-						))}
-					</div>
+					{watches.map((watchImg, j) => (
+						<div
+							key={watchImg + j}
+							onClick={() => {
+								openLightboxOnSource(numberOfWatches + j);
+							}}
+						>
+							<Image src={watchImg.url} alt="First" width={300} height={300} />
+						</div>
+					))}
 				</div>
 			</div>
 			<FsLightbox
 				toggler={lightboxController.toggler}
 				sourceIndex={lightboxController.sourceIndex}
 				sources={watchUrls}
+				type={"image"}
 			/>
 		</StyledExamplesWrapper>
 	);
@@ -72,8 +67,10 @@ const StyledExamplesWrapper = styled.div`
 	}
 
 	.images-container {
+		width: 100%;
+		margin: 40px auto 0;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 400px 400px;
 		gap: 40px;
 		justify-content: center;
 	}

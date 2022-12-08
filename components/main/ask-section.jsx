@@ -15,6 +15,10 @@ const StyledAsqSection = styled.div`
 	padding-bottom: 90px;
 	background-color: #ffffff;
 
+	@media (max-width: 576px) {
+		padding: 60px 0px;
+	}
+
 	& .asq-section__tilte {
 		text-align: center;
 		font-family: "Roboto", Arial, sans-serif;
@@ -29,6 +33,7 @@ const StyledAsqSection = styled.div`
 		margin-bottom: 75px;
 
 		@media (max-width: 576px) {
+			margin-bottom: 40px;
 			font-size: 30px;
 		}
 	}
@@ -50,7 +55,8 @@ const StyledAsqSection = styled.div`
 		font-size: 34px;
 
 		@media (max-width: 576px) {
-			font-size: 26px;
+			font-size: 20px;
+			line-height: 40px;
 		}
 	}
 

@@ -241,4 +241,8 @@ const StyledMoreInformation = styled.div`
 	font-size: 24px;
 	line-height: 1.55;
 	font-family: "Roboto", Arial, sans-serif;
+
+	@media (max-width: 576px) {
+		font-size: 18px;
+	}
 `;

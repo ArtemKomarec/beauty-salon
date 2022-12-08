@@ -36,9 +36,9 @@ export const Hamburger = (e) => {
 						<div className="hamburger-links">
 							<Image src={logo} alt="logo" />
 							<a href="/">Главная</a>
-							<a href="/">Обучение</a>
-							<a href="/">Наращивание волос</a>
-							<a href="/">Постижерные изделия</a>
+							<a href="/education">Обучение</a>
+							<a href="/extension">Наращивание волос</a>
+							<a href="/posterior">Постижерные изделия</a>
 						</div>
 						<div className="contants-with-us">
 							<div className="socials-contacts">

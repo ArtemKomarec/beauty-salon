@@ -97,7 +97,7 @@ const StyledContainer = styled.div`
 
 const menuColumns = [
 	{
-		caption: "ИНФО",
+		caption: { caption: "ИНФО" },
 		links: [
 			{
 				caption: "КАК ПРОДАТЬ ВОЛОСЫ",
@@ -114,7 +114,7 @@ const menuColumns = [
 		],
 	},
 	{
-		caption: "СВЯЗЬ",
+		caption: { caption: "СВЯЗЬ" },
 		links: [
 			{
 				caption: "ПОЗВОНИТЬ",
@@ -142,16 +142,14 @@ export const Footer = () => (
 				</div>
 			</div>
 			<div className="footer__menu-list">
-				{menuColumns.map((menuItem) => (
-					<div className="footer__menu-item">
-						<div className="menu-item__caption">{menuItem.caption}</div>
+				{menuColumns.map((menuItem, menuIndex) => (
+					<div className="footer__menu-item" key={menuIndex}>
+						<div className="menu-item__caption">{menuItem.caption.caption}</div>
 						<div className="menu-item__sub-menu">
 							<ul>
-								{menuItem.links.map((link) => (
-									<li className="sub-menu__item">
-										<a href={link.href} key={link.caption}>
-											{link.caption}
-										</a>
+								{menuItem.links.map((link, linksIndex) => (
+									<li className="sub-menu__item" key={linksIndex}>
+										<a href={link.href}>{link.caption}</a>
 									</li>
 								))}
 							</ul>
