@@ -34,7 +34,7 @@ export const Hamburger = (e) => {
 					</button>
 					<div className="hamburger-container">
 						<div className="hamburger-links">
-							<Image src={logo} />
+							<Image src={logo} alt="logo" />
 							<a href="/">Главная</a>
 							<a href="/">Обучение</a>
 							<a href="/">Наращивание волос</a>
@@ -42,9 +42,9 @@ export const Hamburger = (e) => {
 						</div>
 						<div className="contants-with-us">
 							<div className="socials-contacts">
-								<Image src={viber} width={38} height={38} />
-								<Image src={instagram} width={30} height={30} />
-								<Image src={facebook} width={30} height={30} />
+								<Image src={viber} width={38} height={38} alt="viber" />
+								<Image src={instagram} width={30} height={30} alt="instagram" />
+								<Image src={facebook} width={30} height={30} alt="facebook" />
 							</div>
 							<a className="phone-contact" href="tel:+375336564222">
 								+375336564294

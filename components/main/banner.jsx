@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Sticky } from "../../assets/icons/sticky";
-import banner from "../../assets/main-banner.jpg";
+import banner from "../../assets/banners/main-banner.jpg";
 
 export const Banner = () => {
 	return (

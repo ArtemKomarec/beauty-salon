@@ -15,8 +15,8 @@ export const Header = () => {
 
 			<HeaderMenu>
 				<Hamburger />
-				<HeaderMenuItem>Главная</HeaderMenuItem>
-				<HeaderMenuItem>Обучение</HeaderMenuItem>
+				<HeaderMenuItem href="/">Главная</HeaderMenuItem>
+				<HeaderMenuItem href="/education">Обучение</HeaderMenuItem>
 				<HeaderMenuItem>Наращивание</HeaderMenuItem>
 				<HeaderMenuItem>Постижерные изделия</HeaderMenuItem>
 				<StyledSocialLinks>
@@ -54,13 +54,12 @@ const HeaderMenu = styled.div`
 	gap: 16px;
 `;
 
-const HeaderMenuItem = styled.div`
+const HeaderMenuItem = styled.a`
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 500;
 	font-family: "Roboto";
 	text-transform: uppercase;
-	cursor: pointer;
 	text-align: center;
 	@media (max-width: 892px) {
 		font-size: 14px;

@@ -149,7 +149,9 @@ export const Footer = () => (
 							<ul>
 								{menuItem.links.map((link) => (
 									<li className="sub-menu__item">
-										<a href={link.href}>{link.caption}</a>
+										<a href={link.href} key={link.caption}>
+											{link.caption}
+										</a>
 									</li>
 								))}
 							</ul>
