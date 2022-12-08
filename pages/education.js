@@ -5,6 +5,7 @@ import { Banner } from "../components/sample-additionaly-page/additional-banner"
 import banner from "../assets/banners/education-banner.jpg";
 import { Program } from "../components/sample-additionaly-page/additional-program";
 import { Description } from "../components/sample-additionaly-page/additional-description";
+import descImage from "../assets/description/education-description.jpeg";
 import { Prices } from "../components/sample-additionaly-page/additional-prices";
 import { Theory } from "../assets/icons/program/theory";
 import { Practice } from "../assets/icons/program/practice";
@@ -92,7 +93,7 @@ export default function Education() {
 			<main>
 				<Banner data={bannerInfo} />
 				<Program data={programInfo} title={"Программа обучения"} />
-				<Description data={descriptionInfo} />
+				<Description data={descriptionInfo} image={descImage} />
 				<Prices priceList={priceList} />
 			</main>
 

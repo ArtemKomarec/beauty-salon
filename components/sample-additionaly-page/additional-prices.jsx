@@ -6,7 +6,7 @@ export const Prices = ({ priceList }) => {
 			<h1 className="prices-title">Наши цены</h1>
 			<div className="prices-content-container">
 				{priceList.map((service, index) => (
-					<div className="asd" key={index}>
+					<div className="service-container" key={index}>
 						<p className="service-name">{service.name}</p>
 						<p className="service-price">{service.price}</p>
 					</div>
@@ -42,12 +42,13 @@ export const StyledPricesWrapper = styled.div`
 		justify-content: center;
 	}
 
-	.asd {
-		padding: 8px 10px;
+	.service-container {
+		padding: 8px 20px;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		gap: 20px;
+		text-align: left;
 		line-height: 1.4;
 	}
 

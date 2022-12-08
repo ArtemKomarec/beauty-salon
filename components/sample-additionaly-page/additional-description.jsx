@@ -1,8 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
-import descImage from "../../assets/description/extension-description.jpeg";
 
-export const Description = ({ data }) => {
+export const Description = ({ data, image }) => {
 	return (
 		<StyledDescriptionWrapper>
 			<div className="content-wrapper">
@@ -15,7 +14,7 @@ export const Description = ({ data }) => {
 					</p>
 				</div>
 				<div className="image-container">
-					<Image src={descImage} fill alt="description image" />
+					<Image src={image} fill alt="description image" />
 				</div>
 			</div>
 		</StyledDescriptionWrapper>
@@ -44,8 +43,15 @@ const StyledDescriptionWrapper = styled.div`
 		max-width: 600px;
 		width: 100%;
 		color: #000000;
-	}
 
+		@media (max-width: 1024px) {
+			max-width: 400px;
+		}
+		@media (max-width: 1024px) {
+			max-width: 700px;
+			padding: 0px 20px;
+		}
+	}
 	.description-text-title {
 		font-size: 28px;
 		font-family: "Open Sans", Arial, sans-serif;

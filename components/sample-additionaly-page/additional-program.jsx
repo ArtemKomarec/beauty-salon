@@ -25,6 +25,10 @@ export const Program = ({ data, title }) => {
 const StyledProgramWrapper = styled.div`
 	padding: 70px 0px;
 
+	@media (max-width: 992px) {
+		padding: 40px 0px;
+	}
+
 	.program-title {
 		color: #17434e;
 		text-align: center;

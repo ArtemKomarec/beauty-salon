@@ -17,8 +17,8 @@ export const Header = () => {
 				<Hamburger />
 				<HeaderMenuItem href="/">Главная</HeaderMenuItem>
 				<HeaderMenuItem href="/education">Обучение</HeaderMenuItem>
-				<HeaderMenuItem>Наращивание</HeaderMenuItem>
-				<HeaderMenuItem>Постижерные изделия</HeaderMenuItem>
+				<HeaderMenuItem href="/extension">Наращивание</HeaderMenuItem>
+				<HeaderMenuItem href="/posterior">Постижерные изделия</HeaderMenuItem>
 				<StyledSocialLinks>
 					<a href="/">
 						<Image src={vk} alt="alt" width={30} height={30} />
