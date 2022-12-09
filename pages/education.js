@@ -11,6 +11,7 @@ import { Theory } from "../assets/icons/program/theory";
 import { Practice } from "../assets/icons/program/practice";
 import { Lection } from "../assets/icons/program/lection";
 import { FeedBack } from "../assets/icons/program/feedback";
+import styled from "styled-components";
 
 export default function Education() {
 	const bannerInfo = {
@@ -93,6 +94,8 @@ export default function Education() {
 			<main>
 				<Banner data={bannerInfo} />
 				<Program data={programInfo} title={"Программа обучения"} />
+				<p>Rounded</p>
+				<Divider></Divider>
 				<Description data={descriptionInfo} image={descImage} />
 				<Prices priceList={priceList} />
 			</main>
@@ -101,3 +104,7 @@ export default function Education() {
 		</div>
 	);
 }
+
+const Divider = styled.div`
+	border-top: 30px solid #f6f6f6;
+`;

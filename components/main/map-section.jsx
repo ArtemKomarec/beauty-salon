@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import { YMaps, Map, Placemark } from "react-yandex-maps";
-import {
-	FacebookIcon,
-	InstagramIcon,
-	OkIcon,
-	VkontakteIcon,
-} from "../../icons";
+import { FacebookIcon, InstagramIcon } from "../../icons";
 import { useEffect, useRef, useState } from "react";
+import { Viber } from "../../assets/icons/viber";
 
 const StyledMapSection = styled.div`
 	display: flex;
@@ -43,7 +39,7 @@ const StyledMapSection = styled.div`
 
 	& .map-section__socials-list > div {
 		display: flex;
-		gap: 5px;
+		gap: 8px;
 	}
 
 	& .map-section__addresses {
@@ -95,11 +91,7 @@ const contactsList = [
 	},
 	{
 		href: "#",
-		Icon: VkontakteIcon,
-	},
-	{
-		href: "#",
-		Icon: OkIcon,
+		Icon: Viber,
 	},
 	{
 		href: "#",
@@ -116,7 +108,6 @@ export const MapSection = () => {
 
 	useEffect(() => {
 		const observer = new ResizeObserver((entries) => {
-			console.log(entries[0]);
 			setBounds({
 				width: entries[0].contentRect.width,
 				height: entries[0].contentRect.height,
@@ -178,9 +169,14 @@ export const MapSection = () => {
 					<div className="map-section__socials-list">
 						<div>
 							{contactsList.map((link) => (
-								<div className="socials-list__list">
+								<div className="socials-list__list" key={link.Icon}>
 									<a href={link.href} target="_blank" rel="noopener">
-										<link.Icon />
+										<link.Icon
+											bg={"#FFFFFF"}
+											color={"#17434e"}
+											height={30}
+											width={30}
+										/>
 									</a>
 								</div>
 							))}

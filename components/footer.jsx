@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
 
 	& .footer__menu-list {
 		display: flex;
-		gap: 20px;
+		gap: 50px;
 	}
 
 	& .menu-item__sub-menu > ul {
@@ -32,6 +32,7 @@ const StyledFooter = styled.footer`
 		color: #ffffff;
 		display: block;
 		margin-bottom: 10px;
+		text-transform: uppercase;
 
 		@media (max-width: 576px) {
 			font-size: 14px;
@@ -100,16 +101,16 @@ const menuColumns = [
 		caption: { caption: "ИНФО" },
 		links: [
 			{
-				caption: "КАК ПРОДАТЬ ВОЛОСЫ",
-				href: "#",
+				caption: "Обучение",
+				href: "/education",
 			},
 			{
-				caption: "ЧТО ПОКУПАЕМ",
-				href: "#",
+				caption: "Наращивание волос",
+				href: "/extension",
 			},
 			{
-				caption: "ВЫГОДЫ",
-				href: "#",
+				caption: "Постижерные изделия",
+				href: "/posterior",
 			},
 		],
 	},
@@ -117,15 +118,15 @@ const menuColumns = [
 		caption: { caption: "СВЯЗЬ" },
 		links: [
 			{
-				caption: "ПОЗВОНИТЬ",
+				caption: "Позвонить",
+				href: "tel: 375336564294",
+			},
+			{
+				caption: "Записаться",
 				href: "#",
 			},
 			{
-				caption: "ЗАКАЗАТЬ ЗВОНОК",
-				href: "#",
-			},
-			{
-				caption: "КОНТАКТЫ",
+				caption: "Перейти в инстаграм",
 				href: "#",
 			},
 		],

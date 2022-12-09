@@ -88,6 +88,11 @@ const StyledDescriptionWrapper = styled.div`
 		width: 400px;
 		height: 400px;
 		padding: 0px 20px;
+		object-fit: contain;
+
+		img {
+			object-fit: contain;
+		}
 
 		@media (max-width: 576px) {
 			width: 300px;

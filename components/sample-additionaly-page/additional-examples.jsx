@@ -1,23 +1,9 @@
 import styled from "styled-components";
-import check from "../../public/advantages.png";
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Image from "next/image";
-import check2 from "../../public/MockLogo.png";
 
-const watches = [
-	{
-		url: check,
-		alt: "First",
-	},
-	{
-		url: check2,
-		alt: "sec",
-	},
-];
-let watchUrls = ["/advantages.png", "/MockLogo.png"];
-
-export const Examples = () => {
+export const Examples = ({ imagesList, width, height }) => {
 	const [numberOfWatches, setNumberOfWatches] = useState(0);
 	const [lightboxController, setLightboxController] = useState({
 		toggler: false,
@@ -31,19 +17,29 @@ export const Examples = () => {
 		});
 	};
 
+	const imagesLink = imagesList.map((imageLink) => {
+		return imageLink.src;
+	});
+
 	return (
 		<StyledExamplesWrapper>
 			<div>
 				<h1 className="examples-title">Примеры работ</h1>
-				<div className="images-container">
-					{watches.map((watchImg, j) => (
+				<div className="examples-list">
+					{imagesList.map((exampleImg, index) => (
 						<div
-							key={watchImg + j}
+							className="image-wrapper"
+							key={exampleImg + index}
 							onClick={() => {
-								openLightboxOnSource(numberOfWatches + j);
+								openLightboxOnSource(numberOfWatches + index);
 							}}
 						>
-							<Image src={watchImg.url} alt="First" width={300} height={300} />
+							<Image
+								src={exampleImg.image}
+								alt="example"
+								width={width}
+								height={height}
+							/>
 						</div>
 					))}
 				</div>
@@ -51,7 +47,7 @@ export const Examples = () => {
 			<FsLightbox
 				toggler={lightboxController.toggler}
 				sourceIndex={lightboxController.sourceIndex}
-				sources={watchUrls}
+				sources={imagesLink}
 				type={"image"}
 			/>
 		</StyledExamplesWrapper>
@@ -64,14 +60,35 @@ const StyledExamplesWrapper = styled.div`
 
 	.examples-title {
 		text-align: center;
+		color: #000;
 	}
 
-	.images-container {
+	.examples-list {
 		width: 100%;
 		margin: 40px auto 0;
 		display: grid;
-		grid-template-columns: 400px 400px;
+		grid-template-columns: 300px 300px 300px;
 		gap: 40px;
 		justify-content: center;
+
+		@media (max-width: 1024px) {
+			grid-template-columns: 300px 300px;
+		}
+
+		@media (max-width: 670px) {
+			grid-template-columns: 300px;
+		}
+	}
+
+	.image-wrapper {
+		position: relative;
+
+		img {
+			cursor: pointer;
+		}
+	}
+
+	.image-wrapper:last-child:nth-child(3n - 2) {
+		grid-column-end: 1;
 	}
 `;

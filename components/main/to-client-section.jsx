@@ -73,6 +73,14 @@ const StyledToClientSection = styled.div`
 		background-color: rgba(255, 255, 255, 1);
 	}
 
+	& .swiper-button-prev {
+		left: 30px;
+	}
+
+	& .swiper-button-next {
+		right: 30px;
+	}
+
 	& .swiper-button-next:after,
 	& .swiper-button-prev:after {
 		font-size: 10px;
@@ -91,7 +99,7 @@ const StyledToClientSection = styled.div`
 		background-color: #ffffff;
 	}
 
-	@media (max-width: 576px) {
+	@media (max-width: 768px) {
 		.swiper-button-next,
 		.swiper-button-prev {
 			display: none;
@@ -119,8 +127,6 @@ export const ToClientSection = () => (
 			loop
 			pagination={{ clickable: true }}
 			scrollbar={{ draggable: true }}
-			onSwiper={(swiper) => console.log(swiper)}
-			onSlideChange={() => console.log("slide change")}
 		>
 			<SwiperSlide>
 				<ToClientSlideItem />

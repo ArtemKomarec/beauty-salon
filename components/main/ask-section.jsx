@@ -1,14 +1,10 @@
 import {
-	FacebookIcon,
 	FacebookSizedIcon,
-	InstagramIcon,
 	InstagramSizedIcon,
-	OkIcon,
-	OkSizedIcon,
-	VkontakteIcon,
 	VkontakteSizedIcon,
 } from "../../icons";
 import styled from "styled-components";
+import { Viber } from "../../assets/icons/viber";
 
 const StyledAsqSection = styled.div`
 	padding-top: 120px;
@@ -106,7 +102,7 @@ const contactsList = [
 	},
 	{
 		href: "#",
-		Icon: VkontakteSizedIcon,
+		Icon: Viber,
 	},
 	{
 		href: "#",
@@ -138,7 +134,7 @@ export const AskSection = () => (
 
 		<div className="asq-section__fast-links">
 			{socialsFastLinks.map((link) => (
-				<p>
+				<p key={link.caption}>
 					<a
 						style={{ color: link.color, borderColor: link.color }}
 						href={link.href}
@@ -152,9 +148,15 @@ export const AskSection = () => (
 		<div className="asq-section__socials-list">
 			<div>
 				{contactsList.map((link) => (
-					<div className="socials-list__list">
+					<div className="socials-list__list" key={link.Icon}>
 						<a href={link.href} target="_blank" rel="noopener">
-							<link.Icon fill="#103038" height={48} width={48} />
+							<link.Icon
+								fill="#103038"
+								height={48}
+								width={48}
+								bg={"#103038"}
+								color={"#FFFFFF"}
+							/>
 						</a>
 					</div>
 				))}

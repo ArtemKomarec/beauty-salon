@@ -13,7 +13,7 @@ export const CutYourself = () => {
 		<StyledCutWrapper>
 			<StyledCutContainer>
 				<ContainerContentItem>
-					<Image src={beforeCut} />
+					<Image src={beforeCut} alt="before cut" />
 					<ItemDescriptionTitle>
 						Не срезайте волосы сами или в парикмахерских
 					</ItemDescriptionTitle>
@@ -22,7 +22,7 @@ export const CutYourself = () => {
 					</ItemDescriptionText>
 				</ContainerContentItem>
 				<ContainerContentItem>
-					<Image src={afterCut} />
+					<Image src={afterCut} alt="after cut" />
 					<ItemDescriptionTitle>
 						Вымойте и высушите волосы накануне среза
 					</ItemDescriptionTitle>

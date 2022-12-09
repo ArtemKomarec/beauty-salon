@@ -46,11 +46,13 @@ const StyledReviewsSection = styled.div`
 	}
 
 	& .swiper-button-prev {
+		left: 30px;
 		border-left: 1px solid;
 		border-bottom: 1px solid;
 	}
 
 	& .swiper-button-next {
+		right: 30px;
 		border-top: 1px solid;
 		border-right: 1px solid;
 	}
@@ -89,7 +91,7 @@ const StyledReviewsSection = styled.div`
 		opacity: 1;
 	}
 
-	@media (max-width: 576px) {
+	@media (max-width: 768px) {
 		.swiper-button-next,
 		.swiper-button-prev {
 			display: none;
