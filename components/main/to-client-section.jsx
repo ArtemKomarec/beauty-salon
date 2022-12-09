@@ -1,72 +1,122 @@
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+export const ToClientSection = () => {
+	return (
+		<StyledToClientSlideItem className="slider_container">
+			<Swiper
+				className="external-buttons"
+				spaceBetween={50}
+				slidesPerView={1}
+				modules={[Navigation, Pagination, A11y]}
+				loop={true}
+				navigation={{
+					clickable: true,
+				}}
+				pagination={{ clickable: true }}
+				onSlideChange={() => console.log("slide change")}
+				onSwiper={(swiper) => console.log(swiper)}
+			>
+				<SwiperSlide className="single_slide">
+					<div className="call_master_img slider_img">
+						<div className="slider_text">
+							<h1 className="desc_header">ВЫЕЗД МАСТЕРА НА ДОМ</h1>
+							<p className="desc_text">
+								Если у вас нет времени на посещение салона в Москве, мы приедем
+								к вам сами.
+							</p>
+						</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide className="single_slide">
+					<div className="style_haircut_img slider_img">
+						<div className="slider_text">
+							<h1 className="desc_header">ВЫЕЗД МАСТЕРА НА ДОМ</h1>
+							<p className="desc_text">
+								Если у вас нет времени на посещение салона в Москве, мы приедем
+								к вам сами.
+							</p>
+						</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide className="single_slide">
+					<div className="buy_hair_img slider_img">
+						<div className="slider_text">
+							<h1 className="desc_header">ВЫЕЗД МАСТЕРА НА ДОМ</h1>
+							<p className="desc_text">
+								Если у вас нет времени на посещение салона в Москве, мы приедем
+								к вам сами.
+							</p>
+						</div>
+					</div>
+				</SwiperSlide>
+			</Swiper>
+		</StyledToClientSlideItem>
+	);
+};
 
 const StyledToClientSlideItem = styled.div`
-	padding: 150px 0px;
-	position: relative;
+	.slider_container {
+	}
 
-	&::after {
+	.single_slide {
+		margin: 0 auto;
+	}
+
+	.slider_img {
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 70vh;
+	}
+
+	.slider_img:after {
 		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url(graphic-to-be-filtered.jpg);
-		background-image: url("https://static.tildacdn.com/tild6439-3232-4365-b331-636663383165/womens2359562_1920_1.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		background-color: #000;
-		filter: brightness(0.5);
+		right: 0;
+		bottom: 0;
+		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+		z-index: 2;
 	}
 
-	& .tc-slide__container {
-		max-width: 760px;
-		margin: 0px auto;
+	.slider_text {
 		position: relative;
-		z-index: 1;
+		z-index: 3;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 13% 0px;
+		text-align: center;
+		padding: 10px 20px;
 	}
 
-	& .tc-slide__title {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-family: "Roboto", Arial, sans-serif;
-		font-weight: 600;
-		font-size: 48px;
-		line-height: 1.23;
+	.desc_header {
 		color: #f03555;
 		text-transform: uppercase;
-
-		@media (max-width: 576px) {
-			font-size: 34px;
-		}
-	}
-	& .tc-slide__description {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-		border: 0;
+		font-size: 48px;
+		line-height: 1.23;
 		font-family: "Roboto", Arial, sans-serif;
-		font-weight: 300;
-		font-size: 20px;
-		line-height: 1.55;
+		font-weight: 600;
+	}
+
+	.desc_text {
 		color: #fff;
 		margin-top: 30px;
-
-		@media (max-width: 576px) {
-			padding: 0px 10px;
-			font-size: 18px;
-		}
+		font-size: 20px;
+		line-height: 1.55;
+		font-family: "Roboto", Arial, sans-serif;
+		font-weight: 300;
 	}
-`;
 
-const StyledToClientSection = styled.div`
-	& .swiper-button-prev,
-	& .swiper-button-next {
+	.swiper-button-prev,
+	.swiper-button-next {
 		width: 30px;
 		height: 30px;
 		border-radius: 100%;
@@ -87,71 +137,59 @@ const StyledToClientSection = styled.div`
 		color: rgb(34, 34, 34);
 	}
 
-	& .swiper-pagination-bullet {
-		width: 10px;
-		height: 10px;
-		background-color: transparent;
-		border: 2px solid #ffffff;
-		opacity: 1;
+	.swiper-pagination-bullet-active {
+		background-color: #fff;
 	}
 
-	& .swiper-pagination-bullet.swiper-pagination-bullet-active {
-		background-color: #ffffff;
+	.swiper-pagination-bullet {
+		background-color: #f6f6f6;
+	}
+
+	.call_master_img {
+		height: 70vh;
+		background-image: url("/slider/slider-1.jpeg");
+		background-position: 80% 60%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.style_haircut_img {
+		height: 70vh;
+		background-image: url("/slider/slider-2.jpeg");
+		background-position: 80% 53%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.buy_hair_img {
+		height: 70vh;
+		background-image: url("/slider/slider-3.jpeg");
+		background-position: 80% 23%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	@media (max-width: 768px) {
-		.swiper-button-next,
-		.swiper-button-prev {
+		.desc_header {
+			font-size: 32px;
+		}
+
+		.desc_text {
+			font-size: 18px;
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
 			display: none;
 		}
 	}
 `;
-
-const ToClientSlideItem = () => (
-	<StyledToClientSlideItem>
-		<div className="tc-slide__container">
-			<div className="tc-slide__title">Стильная прическа</div>
-			<div className="tc-slide__description">
-				Дарим новый образ при сдаче волос длиной от 60 см.
-			</div>
-		</div>
-	</StyledToClientSlideItem>
-);
-
-export const ToClientSection = () => (
-	<StyledToClientSection>
-		<Swiper
-			modules={[Navigation, Pagination, A11y]}
-			slidesPerView={1}
-			navigation
-			loop
-			pagination={{ clickable: true }}
-			scrollbar={{ draggable: true }}
-		>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-			<SwiperSlide>
-				<ToClientSlideItem />
-			</SwiperSlide>
-		</Swiper>
-	</StyledToClientSection>
-);
