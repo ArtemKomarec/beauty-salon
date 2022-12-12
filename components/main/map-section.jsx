@@ -153,7 +153,10 @@ export const MapSection = () => {
 
 						<div className="map-section__contacts">
 							<p>
-								Телефон: <a href="tel:+79025833110">+7(902) 583-31-10</a>
+								Телефон:{" "}
+								<a href="tel:+79025833110" aria-label="phone-map">
+									+7(902) 583-31-10
+								</a>
 							</p>
 							<p>WhatsApp/Viber/Telegram</p>
 						</div>
@@ -170,8 +173,14 @@ export const MapSection = () => {
 						<div>
 							{contactsList.map((link) => (
 								<div className="socials-list__list" key={link.Icon}>
-									<a href={link.href} target="_blank" rel="noopener">
+									<a
+										href={link.href}
+										target="_blank"
+										rel="noopener"
+										aria-label={link.Icon}
+									>
 										<link.Icon
+											aria-label="social icon"
 											bg={"#FFFFFF"}
 											color={"#17434e"}
 											height={30}

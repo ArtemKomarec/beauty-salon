@@ -158,7 +158,7 @@ const StyledLinks = styled.a`
 	padding: 10px;
 	color: floralwhite;
 	font-size: 16px;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	line-height: 1.55;
 	background-color: #f02846;
 	background-position: center center;
@@ -192,7 +192,7 @@ const HeaderItemText = styled.p`
 	margin-left: 6px;
 	color: #f02846;
 	font-size: 14px;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	line-height: 1.55;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -204,7 +204,7 @@ const HeaderItemText = styled.p`
 const DescriptionText = styled.p`
 	color: floralwhite;
 	font-size: 14px;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	line-height: 1.55;
 	font-weight: 700;
 	background-position: center center;

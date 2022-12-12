@@ -100,7 +100,7 @@ export const Banner = ({ data }) => {
 					<span className="text-divider"></span>
 					<p>{data.descAfterDivider}</p>
 				</div>
-				<a className="link-btn" href="tel:+375336564294">
+				<a className="link-btn" href="tel:+375336564294" aria-label="enroll">
 					Записаться
 				</a>
 			</div>

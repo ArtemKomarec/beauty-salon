@@ -35,10 +35,18 @@ export const Hamburger = (e) => {
 					<div className="hamburger-container">
 						<div className="hamburger-links">
 							<Image src={logo} alt="logo" />
-							<a href="/">Главная</a>
-							<a href="/education">Обучение</a>
-							<a href="/extension">Наращивание волос</a>
-							<a href="/posterior">Постижерные изделия</a>
+							<a href="/" aria-label="Главная">
+								Главная
+							</a>
+							<a href="/education" aria-label="Обучение">
+								Обучение
+							</a>
+							<a href="/extension" aria-label="Наращивание волос">
+								Наращивание волос
+							</a>
+							<a href="/posterior" aria-label="Постижерные изделия">
+								Постижерные изделия
+							</a>
 						</div>
 						<div className="contants-with-us">
 							<div className="socials-contacts">
@@ -46,7 +54,11 @@ export const Hamburger = (e) => {
 								<Image src={instagram} width={30} height={30} alt="instagram" />
 								<Image src={facebook} width={30} height={30} alt="facebook" />
 							</div>
-							<a className="phone-contact" href="tel:+375336564222">
+							<a
+								className="phone-contact"
+								href="tel:+375336564222"
+								aria-label="phone-contact"
+							>
 								+375336564294
 							</a>
 							<div className="want-sell">Хочу продать</div>

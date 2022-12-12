@@ -14,18 +14,28 @@ export const Header = () => {
 			</HeaderLogo>
 
 			<HeaderMenu>
-				<Hamburger />
-				<HeaderMenuItem href="/">Главная</HeaderMenuItem>
-				<HeaderMenuItem href="/education">Обучение</HeaderMenuItem>
-				<HeaderMenuItem href="/extension">Наращивание</HeaderMenuItem>
-				<HeaderMenuItem href="/posterior">Постижерные изделия</HeaderMenuItem>
-				<HeaderMenuItem href="tel: +375336666666">+375336666666</HeaderMenuItem>
+				<Hamburger aria-label="hamburger menu" />
+				<HeaderMenuItem href="/" aria-label="main">
+					Главная
+				</HeaderMenuItem>
+				<HeaderMenuItem href="/education" aria-label="education">
+					Обучение
+				</HeaderMenuItem>
+				<HeaderMenuItem href="/extension" aria-label="extension">
+					Наращивание
+				</HeaderMenuItem>
+				<HeaderMenuItem href="/posterior" aria-label="posterior">
+					Постижерные изделия
+				</HeaderMenuItem>
+				<HeaderMenuItem href="tel: +375336666666" aria-label="call">
+					+375336666666
+				</HeaderMenuItem>
 				<StyledSocialLinks>
-					<a href="/">
-						<Image src={facebook} alt="alt" width={30} height={30} />
+					<a href="/" aria-label="facebook">
+						<Image src={facebook} alt="facebook" width={30} height={30} />
 					</a>
-					<a href="/">
-						<Image src={instagram} alt="alt" width={30} height={30} />
+					<a href="/" aria-label="instagram">
+						<Image src={instagram} alt="instagram" width={30} height={30} />
 					</a>
 				</StyledSocialLinks>
 			</HeaderMenu>
@@ -53,7 +63,7 @@ const HeaderMenu = styled.div`
 `;
 
 const HeaderMenuItem = styled.a`
-	color: #ffffff;
+	color: floralwhite;
 	font-size: 16px;
 	font-weight: 500;
 	font-family: "Roboto";

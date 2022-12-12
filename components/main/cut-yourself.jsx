@@ -3,11 +3,6 @@ import Image from "next/image";
 import beforeCut from "../../assets/cut-yourself.jpeg";
 import afterCut from "../../assets/cut-yourself-res.jpeg";
 
-// const ImageStyle = {
-// 	maxWidth: "440px",
-// 	maxHeight: "560px",
-// };
-
 export const CutYourself = () => {
 	return (
 		<StyledCutWrapper>

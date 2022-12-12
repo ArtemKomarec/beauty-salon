@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Image from "next/image";
+import logo from "../assets/MockLogo.png";
 
 const StyledFooter = styled.footer`
 	padding-top: 45px;
@@ -137,7 +139,7 @@ export const Footer = () => (
 	<StyledFooter>
 		<StyledContainer className="container">
 			<div className="footer__logo">
-				<img src="#" />
+				<Image src={logo} alt="logo" />
 				<div className="footer-copyright">
 					© All Rights Reserved. {new Date().getFullYear()}
 				</div>
@@ -150,7 +152,9 @@ export const Footer = () => (
 							<ul>
 								{menuItem.links.map((link, linksIndex) => (
 									<li className="sub-menu__item" key={linksIndex}>
-										<a href={link.href}>{link.caption}</a>
+										<a aria-label={link.caption} href={link.href}>
+											{link.caption}
+										</a>
 									</li>
 								))}
 							</ul>

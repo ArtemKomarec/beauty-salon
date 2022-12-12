@@ -13,7 +13,7 @@ export const Program = ({ data, title }) => {
 				{data.map((step) => (
 					<div className="content-step" key={step.title}>
 						{step.src}
-						<h3 className="step-title">{step.title}</h3>
+						<h2 className="step-title">{step.title}</h2>
 						<p className="step_description">{step.description}</p>
 					</div>
 				))}
@@ -73,6 +73,7 @@ const StyledProgramWrapper = styled.div`
 	}
 
 	.step-title {
+		font-size: 19px;
 		margin-top: 14px;
 		font-weight: 900;
 		transition-delay: 0.05s;

@@ -133,7 +133,7 @@ const AdvantagesLeftItem = styled.div`
 	}
 `;
 
-const ItemTitle = styled.h3`
+const ItemTitle = styled.h2`
 	color: #17434e;
 	font-size: 18px;
 	line-height: 1.35;

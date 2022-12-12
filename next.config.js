@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+
+const Localization = {
+	i18n: {
+		locales: ["ru"],
+		defaultLocale: "ru",
+	},
+};
+
+module.exports = Localization;

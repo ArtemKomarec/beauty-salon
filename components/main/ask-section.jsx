@@ -125,6 +125,7 @@ export const AskSection = () => (
 					href="tel:+79025833110"
 					rel="noopener noreferrer"
 					className="text-mark"
+					aria-label="call"
 				>
 					+7 902 583 31 10
 				</a>
@@ -139,6 +140,7 @@ export const AskSection = () => (
 						style={{ color: link.color, borderColor: link.color }}
 						href={link.href}
 						rel="noopener noreferrer"
+						aria-label="social icon"
 					>
 						{link.caption}
 					</a>
@@ -149,8 +151,14 @@ export const AskSection = () => (
 			<div>
 				{contactsList.map((link) => (
 					<div className="socials-list__list" key={link.Icon}>
-						<a href={link.href} target="_blank" rel="noopener">
+						<a
+							href={link.href}
+							target="_blank"
+							rel="noopener"
+							aria-label="social icon"
+						>
 							<link.Icon
+								aria-label="social icon"
 								fill="#103038"
 								height={48}
 								width={48}

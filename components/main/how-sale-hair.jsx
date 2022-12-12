@@ -95,7 +95,7 @@ const StyledImageWrapper = styled.div`
 	height: 125px;
 `;
 
-const StepDescriptionTitle = styled.h3`
+const StepDescriptionTitle = styled.h2`
 	text-align: center;
 	color: #17434e;
 	font-size: 24px;

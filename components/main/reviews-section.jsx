@@ -12,7 +12,7 @@ const StyledReviewsSection = styled.div`
 	padding-bottom: 90px;
 	background-color: #faebf0;
 
-	& h4 {
+	& h1 {
 		text-align: center;
 		font-family: "Roboto", Arial, sans-serif;
 		font-weight: 600;
@@ -166,7 +166,10 @@ const StyledReviewItem = styled.div`
 const ReviewSlideItem = () => (
 	<StyledReviewItem>
 		<div className="review-item__avatar">
-			<img src="https://thumb.tildacdn.com/tild6365-6530-4432-a262-613361393732/-/cover/300x300/center/center/-/format/webp/1_24.jpg" />
+			<img
+				src="https://thumb.tildacdn.com/tild6365-6530-4432-a262-613361393732/-/cover/300x300/center/center/-/format/webp/1_24.jpg"
+				alt="client"
+			/>
 		</div>
 		<div className="review-item__text">
 			Добрый день! Всем, кто ещё не&nbsp;знает или выбирает, куда обратиться
@@ -183,7 +186,7 @@ const ReviewSlideItem = () => (
 
 export const ReviewsSection = () => (
 	<StyledReviewsSection>
-		<h4>ОТЗЫВЫ ДОВОЛЬНЫХ КЛИЕНТОВ</h4>
+		<h1>ОТЗЫВЫ ДОВОЛЬНЫХ КЛИЕНТОВ</h1>
 		<Swiper
 			modules={[Navigation, Pagination, A11y]}
 			slidesPerView={1}

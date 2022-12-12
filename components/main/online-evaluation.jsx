@@ -50,12 +50,13 @@ export const OnlineEvaluation = () => {
 						<StepDescriptionTitle>
 							Пришлите фото в
 							<br />
-							<a href="/" style={{ color: "#a377c2" }}>
+							<a href="/" style={{ color: "#a377c2" }} aria-label="Viber">
 								Viber
 							</a>
 							<br />
 							<a
 								href="/"
+								aria-label="Telegram"
 								style={{ color: "rgb(6, 162, 201) ", marginLeft: "6px" }}
 							>
 								Telegram
@@ -63,7 +64,11 @@ export const OnlineEvaluation = () => {
 						</StepDescriptionTitle>
 						<StepDescriptionText>
 							На номер{" "}
-							<a href="/" style={{ color: "rgb(206, 21, 40)" }}>
+							<a
+								href="/"
+								style={{ color: "rgb(206, 21, 40)" }}
+								aria-label="Call number"
+							>
 								+79025833110
 							</a>
 						</StepDescriptionText>
@@ -74,7 +79,7 @@ export const OnlineEvaluation = () => {
 				<strong>или отправьте фото волос</strong>
 				<p>
 					- на почту{" "}
-					<a href="/" style={{ color: "rgb(240, 53, 85)" }}>
+					<a href="/" aria-label="Mail" style={{ color: "rgb(240, 53, 85)" }}>
 						alinasliaptsova@gmail.com
 					</a>
 				</p>
@@ -91,7 +96,7 @@ const StyledEvaluationWrapper = styled.div`
 	align-items: center;
 `;
 
-const EvaluationTitle = styled.h2`
+const EvaluationTitle = styled.h1`
 	padding: 0px 20px;
 	text-align: center;
 	color: #17434e;
@@ -118,7 +123,7 @@ const EvaluationText = styled.p`
 	}
 `;
 
-const OnlineEvaluationTableTitle = styled.h1`
+const OnlineEvaluationTableTitle = styled.h2`
 	margin-top: 12px;
 	color: #ce1528;
 	text-align: center;
