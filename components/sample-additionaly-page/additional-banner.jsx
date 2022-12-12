@@ -86,6 +86,13 @@ export const Banner = ({ data }) => {
 			border-color: transparent;
 			border-style: solid;
 		}
+
+		.link-btn:hover {
+			border-color: #f02846;
+			transition: border-color 1s ease;
+			background-color: floralwhite;
+			color: #f02846;
+		}
 	`;
 
 	return (

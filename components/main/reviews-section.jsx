@@ -8,8 +8,7 @@ import "swiper/css/scrollbar";
 import styled from "styled-components";
 
 const StyledReviewsSection = styled.div`
-	padding-top: 90px;
-	padding-bottom: 90px;
+	padding: 60px 20px;
 	background-color: #faebf0;
 
 	& h1 {

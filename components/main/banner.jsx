@@ -16,8 +16,12 @@ export const Banner = () => {
 				</HighPrice>
 				<StyledHairLength>длиной от 35 см</StyledHairLength>
 				<StyledLinksContainer>
-					<StyledLinks href="/">Записаться на продажу волос</StyledLinks>
-					<StyledLinks href="/">Оценка стоимости волос</StyledLinks>
+					<StyledLinks href="/" aria-label="enroll on sell hair">
+						Записаться на продажу волос
+					</StyledLinks>
+					<StyledLinks href="/" aria-label="grade hair price">
+						Оценка стоимости волос
+					</StyledLinks>
 				</StyledLinksContainer>
 				<StyledDescription>
 					<DescriptionItem>
@@ -146,7 +150,7 @@ const StyledLinksContainer = styled.div`
 	z-index: 4;
 
 	@media (max-width: 1340px) {
-		max-width: 246px;
+		max-width: 260px;
 		width: 100%;
 		flex-direction: column;
 	}
@@ -161,6 +165,14 @@ const StyledLinks = styled.a`
 	background-color: #f02846;
 	border-color: transparent;
 	border-style: solid;
+
+	&:hover {
+		border-color: #f02846;
+		transition: border-color 1s ease;
+		background-color: floralwhite;
+		color: #f02846;
+	}
+
 	@media (max-width: 1340px) {
 		margin-top: 0px;
 	}

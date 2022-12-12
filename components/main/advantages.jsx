@@ -82,7 +82,7 @@ export const Advantages = () => {
 };
 
 const StyledAdvantages = styled.div`
-	padding: 90px 0px;
+	padding: 60px 20px;
 	background-color: #d7d8d2;
 `;
 

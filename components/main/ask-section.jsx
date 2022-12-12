@@ -7,13 +7,8 @@ import styled from "styled-components";
 import { Viber } from "../../assets/icons/viber";
 
 const StyledAsqSection = styled.div`
-	padding-top: 120px;
-	padding-bottom: 90px;
+	padding: 60px 20px;
 	background-color: #ffffff;
-
-	@media (max-width: 576px) {
-		padding: 60px 0px;
-	}
 
 	& .asq-section__tilte {
 		text-align: center;
@@ -26,7 +21,7 @@ const StyledAsqSection = styled.div`
 		border: 0;
 		font-size: 42px;
 		color: #103038;
-		margin-bottom: 75px;
+		margin-bottom: 30px;
 
 		@media (max-width: 576px) {
 			margin-bottom: 40px;

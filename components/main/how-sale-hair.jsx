@@ -48,12 +48,13 @@ export const HowSaleHair = () => {
 };
 
 const StyledHowSaleHair = styled.div`
-	padding-top: 120px;
+	padding-top: 60px;
 	padding-bottom: 45px;
 	background-color: #f0ebeb;
 `;
 
 const StyledSaleHairTitle = styled.h1`
+	padding: 0px 20px;
 	text-align: center;
 	font-size: 42px;
 	line-height: 1.23;

@@ -92,7 +92,7 @@ export const OnlineEvaluation = () => {
 const StyledEvaluationWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 100px 0px;
+	padding: 60px 20px;
 	align-items: center;
 `;
 
