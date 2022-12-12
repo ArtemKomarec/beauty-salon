@@ -12,6 +12,7 @@ import { Practice } from "../assets/icons/program/practice";
 import { Lection } from "../assets/icons/program/lection";
 import { FeedBack } from "../assets/icons/program/feedback";
 import styled from "styled-components";
+import { HeaderMenu } from "../components/header-menu";
 
 export default function Education() {
 	const bannerInfo = {
@@ -84,12 +85,8 @@ export default function Education() {
 
 	return (
 		<div>
-			<Head>
-				<title>Обучение</title>
-				<meta name="description" content="education" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Header></Header>
+			<Header title={"Обучение наращиванию в Гродно"} />
+			<HeaderMenu></HeaderMenu>
 
 			<main>
 				<Banner data={bannerInfo} />

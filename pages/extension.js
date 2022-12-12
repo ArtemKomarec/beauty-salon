@@ -29,6 +29,7 @@ import { Haircut } from "../assets/icons/extension-program/haircut";
 import { Salon } from "../assets/icons/extension-program/salon";
 import { Scissors } from "../assets/icons/extension-program/scissors";
 import { BanknotExtension } from "../assets/icons/extension-program/banknot";
+import { HeaderMenu } from "../components/header-menu";
 
 const bannerInfo = {
 	banner: banner,
@@ -166,12 +167,8 @@ const priceList = [
 export default function Extension() {
 	return (
 		<div>
-			<Head>
-				<title>Наращивание волос</title>
-				<meta name="description" content="education" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Header></Header>
+			<Header title={"Наращивание волос в Гродно"} />
+			<HeaderMenu></HeaderMenu>
 
 			<main>
 				<Banner data={bannerInfo} />

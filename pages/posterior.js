@@ -23,6 +23,7 @@ import { Fashion } from "../assets/icons/posterior/new-style";
 import { Comfort } from "../assets/icons/posterior/comfort";
 import { Mirror } from "../assets/icons/posterior/mirror";
 import { Box } from "../assets/icons/posterior/box";
+import { HeaderMenu } from "../components/header-menu";
 
 // change text on footer
 
@@ -139,12 +140,8 @@ const priceList = [
 export default function Extension() {
 	return (
 		<div>
-			<Head>
-				<title>Постижерные изделия</title>
-				<meta name="description" content="education" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Header></Header>
+			<Header title={"Постижерные изделия Гродно"} />
+			<HeaderMenu></HeaderMenu>
 
 			<main>
 				<Banner data={bannerInfo} />

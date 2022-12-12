@@ -104,7 +104,6 @@ const HighPrice = styled.h2`
 	font-family: "Open Sans", Arial, sans-serif;
 	line-height: 1.4;
 	font-weight: 700;
-	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
 	text-transform: uppercase;
@@ -123,9 +122,8 @@ const StyledHairLength = styled.p`
 	color: floralwhite;
 	font-size: 40px;
 	font-family: "Open Sans", Arial, sans-serif;
-	line-height: 1.55;
+	line-height: 1.2;
 	font-weight: 700;
-	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
 
@@ -161,7 +159,6 @@ const StyledLinks = styled.a`
 	font-family: Roboto, Arial, sans-serif;
 	line-height: 1.55;
 	background-color: #f02846;
-	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
 	@media (max-width: 1340px) {
@@ -196,7 +193,6 @@ const HeaderItemText = styled.p`
 	line-height: 1.55;
 	font-weight: 700;
 	text-transform: uppercase;
-	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
 `;
@@ -207,7 +203,6 @@ const DescriptionText = styled.p`
 	font-family: "Roboto", Arial, sans-serif;
 	line-height: 1.55;
 	font-weight: 700;
-	background-position: center center;
 	border-color: transparent;
 	border-style: solid;
 `;
