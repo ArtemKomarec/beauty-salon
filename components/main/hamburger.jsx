@@ -6,6 +6,7 @@ import viber from "../../assets/viber.png";
 import instagram from "../../assets/instagram.png";
 import facebook from "../../assets/facebook.png";
 import logo from "../../assets/MockLogo.png";
+import { Logo } from "../../assets/icons/logo";
 
 export const Hamburger = (e) => {
 	const [toggle, setToggle] = useState(false);
@@ -30,11 +31,11 @@ export const Hamburger = (e) => {
 			<div style={{ position: "relative" }}>
 				<HamburgerMenu className="hamburger-menu">
 					<button onClick={handleClick}>
-						<Cross />
+						<Cross className="cross-button" />
 					</button>
 					<div className="hamburger-container">
 						<div className="hamburger-links">
-							<Image src={logo} alt="logo" />
+							<Logo width={208} height={140} />
 							<a href="/" aria-label="Главная">
 								Главная
 							</a>

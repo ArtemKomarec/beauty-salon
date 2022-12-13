@@ -1,9 +1,4 @@
 import styled from "styled-components";
-import { Cross } from "../../assets/icons/close-hamburger";
-import { FeedBack } from "../../assets/icons/program/feedback";
-import { Lection } from "../../assets/icons/program/lection";
-import { Practice } from "../../assets/icons/program/practice";
-import { Theory } from "../../assets/icons/program/theory";
 
 export const Program = ({ data, title }) => {
 	return (

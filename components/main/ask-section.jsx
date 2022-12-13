@@ -1,8 +1,4 @@
-import {
-	FacebookSizedIcon,
-	InstagramSizedIcon,
-	VkontakteSizedIcon,
-} from "../../icons";
+import { FacebookSizedIcon, InstagramSizedIcon } from "../../assets/icons";
 import styled from "styled-components";
 import { Viber } from "../../assets/icons/viber";
 

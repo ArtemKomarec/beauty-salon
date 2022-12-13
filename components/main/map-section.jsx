@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { YMaps, Map, Placemark } from "react-yandex-maps";
-import { FacebookIcon, InstagramIcon } from "../../icons";
+import { FacebookIcon, InstagramIcon } from "../../assets/icons";
 import { useEffect, useRef, useState } from "react";
 import { Viber } from "../../assets/icons/viber";
 

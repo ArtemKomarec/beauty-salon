@@ -18,8 +18,6 @@ export const ToClientSection = () => {
 					clickable: true,
 				}}
 				pagination={{ clickable: true }}
-				onSlideChange={() => console.log("slide change")}
-				onSwiper={(swiper) => console.log(swiper)}
 			>
 				<SwiperSlide className="single_slide">
 					<div className="call_master_img slider_img">

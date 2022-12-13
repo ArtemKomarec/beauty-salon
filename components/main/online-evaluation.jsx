@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
 export const OnlineEvaluation = () => {
+	const steps = [
+		{
+			title: "измерьте длину волос от линии планируемого среза волос до концов",
+			description: "длина волос к срезу должна быть 35 см и больше",
+		},
+		{
+			title: "сделайте фото распущенных волос со спины",
+			description: "желательно, чтобы освещение падало на волосы",
+		},
+	];
+
 	return (
 		<StyledEvaluationWrapper>
 			<EvaluationTitle>
@@ -16,32 +27,18 @@ export const OnlineEvaluation = () => {
 				Онлайн оценка стоимости волос
 			</OnlineEvaluationTableTitle>
 			<OnlineStepWrapper>
-				<OnlineStepContainer>
-					<OnlineStepCircle>
-						<CircleNumber>1</CircleNumber>
-					</OnlineStepCircle>
-					<OnlineStepDescription>
-						<StepDescriptionTitle>
-							измерьте длину волос от линии планируемого среза волос до концов
-						</StepDescriptionTitle>
-						<StepDescriptionText>
-							длина волос к срезу должна быть 41 см и больше
-						</StepDescriptionText>
-					</OnlineStepDescription>
-				</OnlineStepContainer>
-				<OnlineStepContainer>
-					<OnlineStepCircle>
-						<CircleNumber>2</CircleNumber>
-					</OnlineStepCircle>
-					<OnlineStepDescription>
-						<StepDescriptionTitle>
-							сделайте фото распущенных волос со спины
-						</StepDescriptionTitle>
-						<StepDescriptionText>
-							желательно, чтобы освещение падало на волосы
-						</StepDescriptionText>
-					</OnlineStepDescription>
-				</OnlineStepContainer>
+				{steps.map((step, index) => (
+					<OnlineStepContainer key={index}>
+						<OnlineStepCircle>
+							<CircleNumber>{index + 1}</CircleNumber>
+						</OnlineStepCircle>
+						<OnlineStepDescription>
+							<StepDescriptionTitle>{step.title}</StepDescriptionTitle>
+							<StepDescriptionText>{step.description}</StepDescriptionText>
+						</OnlineStepDescription>
+					</OnlineStepContainer>
+				))}
+
 				<OnlineStepContainer>
 					<OnlineStepCircle>
 						<CircleNumber>3</CircleNumber>

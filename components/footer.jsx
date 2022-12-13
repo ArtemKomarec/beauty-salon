@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import logo from "../assets/MockLogo.png";
+import { Logo } from "../assets/icons/logo";
 
 const StyledFooter = styled.footer`
 	padding-top: 45px;
@@ -70,7 +71,7 @@ const StyledFooter = styled.footer`
 
 	& .footer-copyright {
 		color: #525252;
-		margin-top: 40px;
+		margin-top: 10px;
 	}
 
 	@media (max-width: 960px) {
@@ -139,7 +140,7 @@ export const Footer = () => (
 	<StyledFooter>
 		<StyledContainer className="container">
 			<div className="footer__logo">
-				<Image src={logo} alt="logo" />
+				<Logo width={128} height={100} color={"white"} />
 				<div className="footer-copyright">
 					© All Rights Reserved. {new Date().getFullYear()}
 				</div>

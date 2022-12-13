@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
-import logo from "../assets/MockLogo.png";
+import { Logo } from "../assets/icons/logo";
 import instagram from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
-
 import { Hamburger } from "./main/hamburger";
 import { useRouter } from "next/router";
 
@@ -13,7 +12,7 @@ export const HeaderMenu = () => {
 	return (
 		<StyledHeaderWrapper>
 			<HeaderLogo>
-				<Image src={logo} alt="logo" />
+				<Logo width={130} height={70} color={"floralwhite"} />
 			</HeaderLogo>
 
 			<HeaderMenuWrapper>
