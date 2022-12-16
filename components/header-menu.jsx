@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import { Logo } from "../assets/icons/logo";
+import { HeaderLogo } from "../assets/icons/header-logo";
 import instagram from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
 import { Hamburger } from "./main/hamburger";
@@ -11,9 +11,9 @@ export const HeaderMenu = () => {
 
 	return (
 		<StyledHeaderWrapper>
-			<HeaderLogo>
-				<Logo width={130} height={70} color={"floralwhite"} />
-			</HeaderLogo>
+			<HeaderLogotype>
+				<HeaderLogo width={184} height={70} color={"floralwhite"} />
+			</HeaderLogotype>
 
 			<HeaderMenuWrapper>
 				<Hamburger aria-label="hamburger menu" />
@@ -68,7 +68,7 @@ const StyledHeaderWrapper = styled.div`
 	background-color: #f03555;
 `;
 
-const HeaderLogo = styled.div`
+const HeaderLogotype = styled.div`
 	padding: 6px 10px;
 `;
 
